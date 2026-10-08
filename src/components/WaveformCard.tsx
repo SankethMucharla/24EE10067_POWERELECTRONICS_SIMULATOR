@@ -386,7 +386,7 @@ function WaveformCardImpl({ result, dark, cursorMs }: Props) {
     const config: Partial<Plotly.Config> = {
       responsive: true,
       displaylogo: false,
-      scrollZoom: true,
+      scrollZoom: false, // mouse wheel / trackpad scrolling must scroll the page, never zoom the scope
       doubleClick: 'reset',
       modeBarButtonsToRemove: ['select2d', 'lasso2d', 'autoScale2d', 'toggleSpikelines'],
       toImageButtonOptions: { filename: `rectifier-${result.topology}`, format: 'png', scale: 2 },
@@ -484,7 +484,7 @@ function WaveformCardImpl({ result, dark, cursorMs }: Props) {
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <div className="seg" role="group" aria-label="Drag mode">
-            <button data-on={dragmode === 'pan'} onClick={() => setDragmode('pan')} title="Drag to pan, scroll to zoom">
+            <button data-on={dragmode === 'pan'} onClick={() => setDragmode('pan')} title="Drag to pan">
               Pan
             </button>
             <button data-on={dragmode === 'zoom'} onClick={() => setDragmode('zoom')} title="Drag a box to zoom">
@@ -524,7 +524,7 @@ function WaveformCardImpl({ result, dark, cursorMs }: Props) {
             {PANEL_LABEL[p]}
           </button>
         ))}
-        <span className="unit self-center ml-1">click legend entries to hide/show a trace · scroll = zoom · double-click = reset</span>
+        <span className="unit self-center ml-1">click legend entries to hide/show a trace · use the ＋ － buttons or Zoom mode to zoom · double-click = reset</span>
       </div>
       <div className="px-4 pt-2 flex flex-wrap gap-1.5">
         <span className="unit self-center mr-1">zoom to</span>

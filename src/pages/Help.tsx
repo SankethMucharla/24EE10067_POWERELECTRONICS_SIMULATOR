@@ -11,7 +11,7 @@ export default function Help() {
           <li>Set the source, load (R or R-L), and firing angle α for controlled converters.</li>
           <li>With <b>Auto calculate</b> on, results update as you type; otherwise press <b>RUN SIMULATION</b>.</li>
           <li>Use Start / Pause / Step / Reset and the speed buttons to animate the circuit; drag the scrubber to inspect any instant.</li>
-          <li>Waveforms: scroll to zoom, drag to pan (or switch to box-zoom), double-click or <b>Reset zoom</b> to restore, hover for values, click legend entries to hide traces.</li>
+          <li>Waveforms: use the ＋ / － buttons to zoom (the mouse wheel scrolls the page, it does not zoom), drag to pan (or switch to box-zoom), double-click or <b>Reset zoom</b> to restore, hover for values, click legend entries to hide traces.</li>
         </ul>
         <h3>Voltage conventions</h3>
         <p>{VOLTAGE_CONVENTIONS}</p>

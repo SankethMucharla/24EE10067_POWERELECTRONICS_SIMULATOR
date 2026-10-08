@@ -31,7 +31,7 @@ function scope(el: HTMLDivElement, r: SimResult, dark: boolean, withFw: boolean,
     yaxis2: { domain: dom(1), title: { text: 'io (A)' }, range: ir, gridcolor: grid, zerolinecolor: font, anchor: 'x' },
   };
   if (withFw) lay.yaxis3 = { domain: dom(2), title: { text: 'i_FW (A)' }, range: ir, gridcolor: grid, zerolinecolor: font, anchor: 'x' };
-  Plotly.react(el, data as Plotly.Data[], lay as Partial<Plotly.Layout>, { displaylogo: false, responsive: true, scrollZoom: true });
+  Plotly.react(el, data as Plotly.Data[], lay as Partial<Plotly.Layout>, { displaylogo: false, responsive: true, scrollZoom: false });
 }
 
 const f = (v: number | undefined, d = 2) => (v === undefined || !Number.isFinite(v) ? '—' : v.toFixed(d));
